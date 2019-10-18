@@ -1,10 +1,11 @@
 ﻿using LearningAngular.Dominio.ObjetoDeValor;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LearningAngular.Dominio.Entidades
 {
-    public class Pedido
+    public class Pedido : Entidade
     {
         public int Id { get; set; }
         public DateTime DataPedido { get; set; }
@@ -22,6 +23,23 @@ namespace LearningAngular.Dominio.Entidades
 
 
         public ICollection<ItemPedido> ItensPedido { get; set; }
+
+        public override void Validate()
+        {
+            LimparMensagensValidacao();
+
+            if (!ItensPedido.Any())
+                AdicionarMensagemValidacao("O pedido não pode ter Nenhum pedido!!");
+            if (string.IsNullOrEmpty(CEP))
+            {
+                AdicionarMensagemValidacao("O CEP deve estar preenchido");
+            }
+            if(FormaPagamentoId == 0)
+            {
+                AdicionarMensagemValidacao("Não foi informado a forma de pagamento");
+            }
+        }
+
     }
 
 }

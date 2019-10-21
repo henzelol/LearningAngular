@@ -1,7 +1,9 @@
+using LearningAngular.Repositorio.Contexto;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -12,6 +14,10 @@ namespace LearningAngular.web
     {
         public Startup(IConfiguration configuration)
         {
+            var builder = new ConfigurationBuilder();
+
+            builder.AddJsonFile("Config.json", optional: false, reloadOnChange: true);
+
             Configuration = configuration;
         }
 
@@ -21,6 +27,12 @@ namespace LearningAngular.web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            var connectionString = Configuration.GetConnectionString("LearningAngularDB");
+            services.AddDbContext<LearningAngularContexto>(option =>
+                                                                option.UseMySql(connectionString, m =>
+                                                                                                 m.MigrationsAssembly("LearningAngular.Repositorio")));
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

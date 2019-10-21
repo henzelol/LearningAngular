@@ -17,8 +17,4 @@
     <ProjectReference Include="..\LearningAngular.Dominio\LearningAngular.Dominio.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Config\" />
-  </ItemGroup>
-
 </Project>

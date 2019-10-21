@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningAngular.Dominio", "LearningAngular.Dominio\LearningAngular.Dominio.csproj", "{6489DBBA-6558-4C28-9412-FFA809103CA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningAngular.Dominio", "LearningAngular.Dominio\LearningAngular.Dominio.csproj", "{6489DBBA-6558-4C28-9412-FFA809103CA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningAngular.Repositorio", "LearningAngular.Repositorio\LearningAngular.Repositorio.csproj", "{9055D0D1-8FD1-471C-8E54-9309FC9FC0D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningAngular.Repositorio", "LearningAngular.Repositorio\LearningAngular.Repositorio.csproj", "{9055D0D1-8FD1-471C-8E54-9309FC9FC0D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningAngular.Web", "LearningAngular.Web\LearningAngular.Web.csproj", "{15442CA4-9C54-4597-A08A-794F80380E76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningAngular.web", "LearningAngular.web\LearningAngular.web.csproj", "{105EEC20-D097-45AE-82CA-F226F5F04D67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{9055D0D1-8FD1-471C-8E54-9309FC9FC0D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9055D0D1-8FD1-471C-8E54-9309FC9FC0D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9055D0D1-8FD1-471C-8E54-9309FC9FC0D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{15442CA4-9C54-4597-A08A-794F80380E76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{15442CA4-9C54-4597-A08A-794F80380E76}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{15442CA4-9C54-4597-A08A-794F80380E76}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{15442CA4-9C54-4597-A08A-794F80380E76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{105EEC20-D097-45AE-82CA-F226F5F04D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105EEC20-D097-45AE-82CA-F226F5F04D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105EEC20-D097-45AE-82CA-F226F5F04D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105EEC20-D097-45AE-82CA-F226F5F04D67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

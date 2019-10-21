@@ -9,7 +9,16 @@ namespace LearningAngular.Repositorio.Config
     {
         public void Configure(EntityTypeBuilder<ItemPedido> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(h => h.Id);
+            builder
+                .Property(h => h.ProdutoId)
+                .IsRequired();
+
+            builder
+                .Property(h => h.Quantidade)
+                .HasMaxLength(50)
+                .IsRequired();
+
         }
     }
 }

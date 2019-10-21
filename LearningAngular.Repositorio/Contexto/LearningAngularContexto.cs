@@ -1,6 +1,7 @@
 ﻿using JetBrains.Annotations;
 using LearningAngular.Dominio.Entidades;
 using LearningAngular.Dominio.ObjetoDeValor;
+using LearningAngular.Repositorio.Config;
 using Microsoft.EntityFrameworkCore;
 
 namespace LearningAngular.Repositorio.Contexto
@@ -20,10 +21,19 @@ namespace LearningAngular.Repositorio.Contexto
 
         public LearningAngularContexto(DbContextOptions options) : base(options)
         {
-
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new UsuarioConfiguration());
+            modelBuilder.ApplyConfiguration(new FormaPagamentoConfiguration());
+            modelBuilder.ApplyConfiguration(new ItemPedidoConfiguration());
+            modelBuilder.ApplyConfiguration(new ProdutoConfiguration());
+            modelBuilder.ApplyConfiguration(new PedidoConfiguration());
 
+
+            base.OnModelCreating(modelBuilder);
+        }
 
     }
 }

@@ -8,7 +8,20 @@ namespace LearningAngular.Repositorio.Config
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
-            throw new System.NotImplementedException();
+            builder.HasKey(h => h.Id);
+            builder.Property(h => h.Email)
+                    .IsRequired()
+                    .HasMaxLength(50);
+            builder.Property(h => h.Senha)
+                .HasMaxLength(400)
+                .IsRequired();
+            builder.Property(h => h.Nome)
+                .HasMaxLength(50)
+                .IsRequired();
+            builder.Property(h => h.SobreNome)
+                .HasMaxLength(50)
+                .IsRequired();
+
         }
     }
 }

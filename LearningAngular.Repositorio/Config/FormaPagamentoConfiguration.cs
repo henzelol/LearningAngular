@@ -8,7 +8,34 @@ namespace LearningAngular.Repositorio.Config
     {
         public void Configure(EntityTypeBuilder<FormaPagamento> builder)
         {
-            throw new System.NotImplementedException();
+            builder.HasKey(h => h.Id);
+            builder
+                .Property(h => h.Nome)
+                .HasMaxLength(50)
+                .IsRequired();
+            builder
+                .Property(h => h.Descricao)
+                .HasMaxLength(180)
+                .IsRequired();
+            builder
+                .Property(h => h.IsBoleto)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            builder
+               .Property(h => h.IsCartaoCredito)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            builder
+                .Property(h => h.IsDeposito)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            builder
+                .Property(h => h.IsNaoDefinido)
+                .HasMaxLength(50)
+                .IsRequired();
         }
     }
 }

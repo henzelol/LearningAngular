@@ -30,8 +30,9 @@ namespace LearningAngular.web
 
             var connectionString = Configuration.GetConnectionString("LearningAngularDB");
             services.AddDbContext<LearningAngularContexto>(option =>
-                                                                option.UseMySql(connectionString, m =>
-                                                                                                 m.MigrationsAssembly("LearningAngular.Repositorio")));
+                                                                option.UseLazyLoadingProxies()
+                                                                    .UseMySql(connectionString, m =>
+                                                                     m.MigrationsAssembly("LearningAngular.Repositorio")));
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

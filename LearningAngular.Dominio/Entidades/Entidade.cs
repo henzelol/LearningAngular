@@ -5,8 +5,8 @@ namespace LearningAngular.Dominio.Entidades
 {
     public abstract class Entidade
     {
-        protected List<string> _mensagensValidacao { get; set; }
-        public List<string> MensagemValidacao
+        private List<string> _mensagensValidacao { get; set; }
+        private List<string> MensagemValidacao
         {
             get
             {

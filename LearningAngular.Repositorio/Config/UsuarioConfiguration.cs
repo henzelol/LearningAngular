@@ -22,6 +22,9 @@ namespace LearningAngular.Repositorio.Config
                 .HasMaxLength(50)
                 .IsRequired();
 
+            builder.HasMany(h => h.Pedidos)
+                .WithOne(e => e.Usuario);
+
         }
     }
 }

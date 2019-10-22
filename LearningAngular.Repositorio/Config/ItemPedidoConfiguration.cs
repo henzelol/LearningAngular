@@ -9,7 +9,8 @@ namespace LearningAngular.Repositorio.Config
     {
         public void Configure(EntityTypeBuilder<ItemPedido> builder)
         {
-            builder.HasKey(h => h.Id);
+            builder
+                .HasKey(h => h.Id);
             builder
                 .Property(h => h.ProdutoId)
                 .IsRequired();
